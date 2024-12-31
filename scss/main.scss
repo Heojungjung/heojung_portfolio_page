@@ -15,7 +15,7 @@
 }
 
 body{
-  cursor: url(/images/hand_cursor.png),auto;
+  cursor: url(./images/hand_cursor.png),auto;
 }
 
 .load-frame{
@@ -96,9 +96,9 @@ body{
   height: 100vh;
   overflow: hidden;
   background-size: cover;
-  background-image: url(/images/mainboard.jpg);
+  background-image: url(./images/mainboard.jpg);
   .main-shadow{
-    background-image: url(/images/board_shadow.png);
+    background-image: url(./images/board_shadow.png);
     z-index: 999;
     opacity: 0.5;
     position: absolute;
@@ -161,7 +161,7 @@ body{
           box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.5);
           rotate: -7deg;
           z-index: 100;
-          cursor: url(/images/cut_cursor.png),auto;
+          cursor: url(./images/cut_cursor.png),auto;
           &:hover{
             scale: 1.2;
             transition: 1s;
@@ -192,20 +192,20 @@ body{
           top: 50px;
           width: 100px;
           height: 200px;
-          cursor: url(/images/zoom_cursor.png),auto;
+          cursor: url(./images/zoom_cursor.png),auto;
           &:hover{
             transition: 1s;
             scale: 1.08;
             .underphoto{
                 transition: 1s;
-                background-image: url(/images/main_underphoto_color.png);             
+                background-image: url(./images/main_underphoto_color.png);             
             }
           }
           .underphoto{
             display: block;
             width: 100px;
             height: 150px;
-            background-image: url(/images/main_underphoto.png);
+            background-image: url(./images/main_underphoto.png);
             background-repeat: no-repeat;
             background-size: contain;
           }
@@ -356,7 +356,7 @@ body{
                 top: -10px;
                 width: 18px;
                 height: 18px;
-                background-image: url(/images/point_star.png);
+                background-image: url(./images/point_star.png);
                 background-size: cover;
                 background-repeat: no-repeat;
               }
@@ -392,7 +392,7 @@ body{
               background-color: rgba(255, 255, 255, 0.8);
               &:hover{
                 scale: 1.2;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
               }
               .title{
                 font-size: 15px;
@@ -450,7 +450,7 @@ body{
           overflow: hidden;
           padding: 30px;
           padding-top: 80px;
-          background-image: url(/images/sticky.png);
+          background-image: url(./images/sticky.png);
           background-size: cover;
           background-repeat: no-repeat;
           
@@ -491,7 +491,7 @@ body{
               justify-content: center;
               flex-direction: column-reverse;
               border: 1px solid rgba(0, 0, 0, 0.56);
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 img{
                   filter: grayscale(0.0);
@@ -558,7 +558,7 @@ body{
           }
           .skill-rating{
             filter: blur(8px);
-            cursor: url(/images/zoom_cursor.png),auto;
+            cursor: url(./images/zoom_cursor.png),auto;
             transition: 1s;
             &.visible{
               filter: blur(0);
@@ -661,14 +661,14 @@ body{
         width: 600px;
         height: 800px;
         rotate: 15deg;
-        background-image: url(/images/remainpage.png);
+        background-image: url(./images/remainpage.png);
         background-size: contain;
-        cursor: url(/images/zoom_cursor.png),auto;
+        cursor: url(./images/zoom_cursor.png),auto;
         &:hover{
           scale: 1.2;
           opacity: 0.7;
           transition: 1s;
-          background-image: url(/images/remainpage_hover.png);
+          background-image: url(./images/remainpage_hover.png);
         }
       }
     }
@@ -684,7 +684,7 @@ body{
         right: -2.5%;
         top: 15%;  
         z-index: 105;
-        cursor: url('/images/hand_cursor.png'), auto;
+        cursor: url('./images/hand_cursor.png'), auto;
         padding: 5px 15px;
         border-radius: 0px 15px 15px 0px;
         writing-mode: vertical-lr;
@@ -711,7 +711,7 @@ body{
         right: -2.5%;
         top: 20%;  
         z-index: 103;
-        cursor: url('/images/hand_cursor.png'), auto;
+        cursor: url('./images/hand_cursor.png'), auto;
         padding: 15px;
         border-radius: 0px 15px 15px 0px;
         writing-mode: vertical-lr;
@@ -1192,7 +1192,7 @@ body{
                   &:hover{
                     color: $red;
                     scale: 1.2;
-                    cursor: url(/images/zoom_cursor.png),auto;
+                    cursor: url(./images/zoom_cursor.png),auto;
                     text-decoration: underline;
                     margin-left: 15px;
                   }
@@ -1222,7 +1222,7 @@ body{
                   background-color: rgba(0, 0, 0, 0.55);
                   padding: 15px;
                   border-radius: 8px;
-                  cursor: url(/images/zoom_cursor.png),auto;                
+                  cursor: url(./images/zoom_cursor.png),auto;                
                   pointer-events: none;
                 }
               }
@@ -1231,7 +1231,7 @@ body{
                 img{
                   width: inherit;
                   height: auto;
-                  cursor: url(/images/zoom_cursor.png),auto;
+                  cursor: url(./images/zoom_cursor.png),auto;
                 }
                 .clip{
                   width: 40px;
@@ -1273,7 +1273,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 2deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;                
+              cursor: url(./images/zoom_cursor.png),auto;                
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -1338,7 +1338,7 @@ body{
                   rotate: -30deg;
                   width: 100px;
                   height: 170px;
-                  background-image: url(/images/file01/arrow.png);
+                  background-image: url(./images/file01/arrow.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                   z-index: 0;
@@ -1370,7 +1370,7 @@ body{
                 text-align: center;
                 text-decoration: none;
                 color: $red;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
               .clip{
                 position: absolute;
                 top: -10px;
@@ -1437,7 +1437,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -1456,7 +1456,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -1482,7 +1482,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -1495,7 +1495,7 @@ body{
                   top: -22%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -1541,7 +1541,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -1575,7 +1575,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -5deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -1588,7 +1588,7 @@ body{
                   top: -16%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -1634,7 +1634,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -1668,7 +1668,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -1681,7 +1681,7 @@ body{
                   top: -22%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -1896,7 +1896,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -1deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -1916,7 +1916,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -1942,7 +1942,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -1955,7 +1955,7 @@ body{
                   top: -22%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2002,7 +2002,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -2037,7 +2037,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -5deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -2050,7 +2050,7 @@ body{
                   top: -16%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2096,7 +2096,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -2130,7 +2130,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -2143,7 +2143,7 @@ body{
                   top: -20%;
                   left: 49%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2361,7 +2361,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -1deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -2381,7 +2381,7 @@ body{
                   top: -6%;
                   left: 3%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2407,7 +2407,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -2420,7 +2420,7 @@ body{
                   top: -22%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2467,7 +2467,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -2502,7 +2502,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -5deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -2515,7 +2515,7 @@ body{
                   top: -16%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2561,7 +2561,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -2595,7 +2595,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -2608,7 +2608,7 @@ body{
                   top: -20%;
                   left: 49%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2828,7 +2828,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -2861,7 +2861,7 @@ body{
                 transition: transform 0.5s ease, opacity 0.5s ease;              
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -2874,7 +2874,7 @@ body{
                   top: -22%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -2920,7 +2920,7 @@ body{
                 box-sizing: content-box;
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 3deg;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -2955,7 +2955,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -5deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -2968,7 +2968,7 @@ body{
                   top: -16%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3018,7 +3018,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -7deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -3031,7 +3031,7 @@ body{
                   top: -20%;
                   left: 49%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3251,7 +3251,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3271,7 +3271,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3295,7 +3295,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -3308,7 +3308,7 @@ body{
                   top: -17%;
                   left: 47%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3429,7 +3429,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3450,7 +3450,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3474,7 +3474,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -6deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3495,7 +3495,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3519,7 +3519,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -6deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3540,7 +3540,7 @@ body{
                   top: -5%;
                   left: 92%;
                   transform: rotate(90deg);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3565,7 +3565,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3586,7 +3586,7 @@ body{
                   top: -21%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3610,7 +3610,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3632,7 +3632,7 @@ body{
                   top: -5%;
                   left: 15%;
                   transform: translate(-50%) rotate(-10deg);
-                  background-image: url(/images/tape_02.png);
+                  background-image: url(./images/tape_02.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3661,7 +3661,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3683,7 +3683,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3707,7 +3707,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 6deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3728,7 +3728,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3752,7 +3752,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3773,7 +3773,7 @@ body{
                   top: -5%;
                   left: 92%;
                   transform: rotate(90deg);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3798,7 +3798,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -7deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3819,7 +3819,7 @@ body{
                   top: -13%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3843,7 +3843,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3865,7 +3865,7 @@ body{
                   top: -5%;
                   left: 5%;
                   transform: translate(-50%) rotate(-10deg);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -3889,7 +3889,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -3911,7 +3911,7 @@ body{
                   top: -13%;
                   left: 51%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -4293,7 +4293,7 @@ body{
                   &:hover{
                     color: $dark-green;
                     scale: 1.2;
-                    cursor: url(/images/zoom_cursor.png),auto;
+                    cursor: url(./images/zoom_cursor.png),auto;
                     text-decoration: underline;
                     margin-left: 15px;
                   }
@@ -4324,7 +4324,7 @@ body{
                   background-color: rgba(0, 0, 0, 0.55);
                   padding: 15px;
                   border-radius: 8px;
-                  cursor: url(/images/zoom_cursor.png),auto;                
+                  cursor: url(./images/zoom_cursor.png),auto;                
                   pointer-events: none;
                 }
               }
@@ -4333,7 +4333,7 @@ body{
                 img{
                   width: inherit;
                   height: 240px;
-                  cursor: url(/images/zoom_cursor.png),auto;
+                  cursor: url(./images/zoom_cursor.png),auto;
                 }
                 .clip{
                   width: 40px;
@@ -4378,7 +4378,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 2deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;                
+              cursor: url(./images/zoom_cursor.png),auto;                
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -4444,7 +4444,7 @@ body{
                   rotate: -30deg;
                   width: 100px;
                   height: 170px;
-                  background-image: url(/images/file01/arrow.png);
+                  background-image: url(./images/file01/arrow.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                   z-index: 0;
@@ -4476,7 +4476,7 @@ body{
                 text-align: center;
                 text-decoration: none;
                 color: $dark-green;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
               .clip{
                 position: absolute;
                 top: -10px;
@@ -4544,7 +4544,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 0.5deg;
                 z-index: 1;
-                cursor: url(/images/cut_cursor.png),auto;
+                cursor: url(./images/cut_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -4563,7 +4563,7 @@ body{
                   top: -6%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -4589,7 +4589,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -4602,7 +4602,7 @@ body{
                   top: -12%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -4746,7 +4746,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -4766,7 +4766,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -4792,7 +4792,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -4805,7 +4805,7 @@ body{
                   top: -22%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -4851,7 +4851,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -4871,7 +4871,7 @@ body{
                   top: -5%;
                   left: 2%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -4897,7 +4897,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -4910,7 +4910,7 @@ body{
                   top: -22%;
                   left: 50%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -4957,7 +4957,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -4993,7 +4993,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -5027,7 +5027,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -5040,7 +5040,7 @@ body{
                   top: -20%;
                   left: 49%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -5086,7 +5086,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 4deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -5120,7 +5120,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -3deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &.active{
                   display: flex;
                   animation: scaleAndDrop 0.5s ease forwards;
@@ -5133,7 +5133,7 @@ body{
                   top: -20%;
                   left: 49%;
                   transform: translate(-50%);
-                  background-image: url(/images/tape_01.webp);
+                  background-image: url(./images/tape_01.webp);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -5409,7 +5409,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: -1deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -5428,7 +5428,7 @@ body{
                   top: -3%;
                   left: 3%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -5502,7 +5502,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -5521,7 +5521,7 @@ body{
                   top: -3%;
                   left: 3%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -5630,7 +5630,7 @@ body{
                 box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
                 rotate: 2deg;
                 z-index: 1;
-                cursor: url(/images/zoom_cursor.png),auto;
+                cursor: url(./images/zoom_cursor.png),auto;
                 &:hover{
                   scale: 1.2;
                   transition: 1s;
@@ -5649,7 +5649,7 @@ body{
                   top: -3%;
                   left: 3%;
                   transform: translate(-50%);
-                  background-image: url(/images/clip.png);
+                  background-image: url(./images/clip.png);
                   background-repeat: no-repeat;
                   background-size: contain;
                 }
@@ -5758,7 +5758,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: -1deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -5777,7 +5777,7 @@ body{
                 top: -3%;
                 left: 3%;
                 transform: translate(-50%);
-                background-image: url(/images/clip.png);
+                background-image: url(./images/clip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -5886,7 +5886,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: -2deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -5905,7 +5905,7 @@ body{
                 top: -3%;
                 left: 3%;
                 transform: translate(-50%);
-                background-image: url(/images/clip.png);
+                background-image: url(./images/clip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6013,7 +6013,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 0deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6032,7 +6032,7 @@ body{
                 top: -3%;
                 left: 3%;
                 transform: translate(-50%);
-                background-image: url(/images/clip.png);
+                background-image: url(./images/clip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6106,7 +6106,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 0deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6125,7 +6125,7 @@ body{
                 top: -12%;
                 left: 5%;
                 transform: translate(-50%);
-                background-image: url(/images/clip.png);
+                background-image: url(./images/clip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6149,7 +6149,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 0deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6168,7 +6168,7 @@ body{
                 top: -3%;
                 left: 50%;
                 transform: translate(-50%);
-                background-image: url(/images/red_pin.png);
+                background-image: url(./images/red_pin.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6192,7 +6192,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 0deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6211,7 +6211,7 @@ body{
                 top: -3%;
                 left: 3%;
                 transform: translate(-50%);
-                background-image: url(/images/tape_02.png);
+                background-image: url(./images/tape_02.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6224,7 +6224,7 @@ body{
                 right: -3%;
                 rotate: 50deg;
                 transform: translate(-50%);
-                background-image: url(/images/tape_02.png);
+                background-image: url(./images/tape_02.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6248,7 +6248,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 0.5deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6267,7 +6267,7 @@ body{
                 top: -3%;
                 left: 3%;
                 transform: translate(-50%);
-                background-image: url(/images/clip.png);
+                background-image: url(./images/clip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6297,7 +6297,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 4deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6316,7 +6316,7 @@ body{
                 top: -17%;
                 left: 50%;
                 transform: translate(-50%);
-                background-image: url(/images/tape_01.webp);
+                background-image: url(./images/tape_01.webp);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6340,7 +6340,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: -2deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6360,7 +6360,7 @@ body{
                 left: 5%;
                 rotate: -30deg;
                 transform: translate(-50%);
-                background-image: url(/images/clip.png);
+                background-image: url(./images/clip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6384,7 +6384,7 @@ body{
               box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
               rotate: 0deg;
               z-index: 1;
-              cursor: url(/images/zoom_cursor.png),auto;
+              cursor: url(./images/zoom_cursor.png),auto;
               &:hover{
                 scale: 1.2;
                 transition: 1s;
@@ -6403,7 +6403,7 @@ body{
                 top: -3%;
                 left: 3%;
                 transform: translate(-50%);
-                background-image: url(/images/clip.png);
+                background-image: url(./images/clip.png);
                 background-repeat: no-repeat;
                 background-size: contain;
               }
@@ -6576,7 +6576,7 @@ body{
         left: 45%;
         width: 45px;
         height: 45px;
-        background-image: url(/images//red_pin.png);
+        background-image: url(./images//red_pin.png);
         background-repeat: no-repeat;
         background-size: contain;
       }
@@ -6599,7 +6599,7 @@ body{
         left: 45%;
         width: 45px;
         height: 45px;
-        background-image: url(/images//red_pin.png);
+        background-image: url(./images//red_pin.png);
         background-repeat: no-repeat;
         background-size: contain;
       }
@@ -6657,7 +6657,7 @@ body{
       display: flex;
       flex-direction: column;
       text-align: center;
-      cursor: url(/images/zoom_cursor.png),auto;
+      cursor: url(./images/zoom_cursor.png),auto;
       img{
         width: 400px;
       }
@@ -6672,7 +6672,7 @@ body{
         left: 45%;
         width: 45px;
         height: 45px;
-        background-image: url(/images//red_pin.png);
+        background-image: url(./images//red_pin.png);
         background-repeat: no-repeat;
         background-size: contain;
       }
