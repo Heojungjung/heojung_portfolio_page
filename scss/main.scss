@@ -58,7 +58,7 @@ body{
     .footprint-2 {
       width: 80px;
       height: auto;
-      transform: rotateX(180deg);  /* 상하 반전 */
+      transform: rotateX(180deg); 
       animation: walkingAnimation2 4s ease-in-out infinite;
     }
   }
@@ -134,46 +134,39 @@ body{
   /* 발자국 애니메이션 정의 */
   @keyframes walkingAnimation1 {
     0% {
-      transform: translateX(0) translateY(0) rotate(0deg);
+      transform: translateX(0) translateY(0);
     }
-    20% {
-      transform: translateX(20px) translateY(5px) rotate(5deg);
+    25% {
+      transform: translateX(20px) translateY(5px);
     }
-    40% {
-      transform: translateX(40px) translateY(0) rotate(0deg);
+    50% {
+      transform: translateX(40px) translateY(0);
     }
-    60% {
-      transform: translateX(60px) translateY(-5px) rotate(-5deg);
-    }
-    80% {
-      transform: translateX(80px) translateY(0) rotate(0deg);
+    75% {
+      transform: translateX(60px) translateY(-5px);
     }
     100% {
-      transform: translateX(100px) translateY(5px) rotate(5deg);
+      transform: translateX(80px) translateY(0);
     }
   }
 
   @keyframes walkingAnimation2 {
     0% {
-      transform: translateX(0) translateY(0) rotate(0deg);
+      transform: translateX(0) translateY(0);
     }
-    20% {
-      transform: translateX(20px) translateY(5px) rotate(5deg);
+    25% {
+      transform: translateX(20px) translateY(5px);
     }
-    40% {
-      transform: translateX(40px) translateY(0) rotate(0deg);
+    50% {
+      transform: translateX(40px) translateY(0);
     }
-    60% {
-      transform: translateX(60px) translateY(-5px) rotate(-5deg);
-    }
-    80% {
-      transform: translateX(80px) translateY(0) rotate(0deg);
+    75% {
+      transform: translateX(60px) translateY(-5px);
     }
     100% {
-      transform: translateX(100px) translateY(5px) rotate(5deg);
+      transform: translateX(80px) translateY(0);
     }
   }
-
   /* 애니메이션 정의 */
   @keyframes wave {
     0% { transform: translateY(-10px); }
