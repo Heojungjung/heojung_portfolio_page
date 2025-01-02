@@ -49,7 +49,7 @@ body{
 
     /* 로딩 텍스트 스타일 */
     .load-text {
-      position: absolute;
+      position: relative;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
