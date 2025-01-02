@@ -212,7 +212,6 @@ body {
           animation-delay: 2.8s;
 }
 #loading-page .load-frame .loading-bar-container {
-  margin-top: 20px;
   background-color: rgba(255, 255, 255, 0.3);
   height: 10px;
   border-radius: 5px;
