@@ -10,9 +10,10 @@ const waitForImages = () => {
     let loadedCount = 0;
 
     images.forEach((img) => {
-      if (img.complete) {
+      if (img.complete) { // 이미 로딩이 완료된 이미지
         loadedCount++;
       } else {
+        // 이미지가 로딩되면 카운팅하고, 모든 이미지가 로드되었을 때 resolve
         img.addEventListener('load', () => {
           loadedCount++;
           if (loadedCount === images.length) resolve();
@@ -24,14 +25,16 @@ const waitForImages = () => {
       }
     });
 
-    if (loadedCount === images.length) resolve(); // 이미 모든 이미지가 로드된 경우
+    // 모든 이미지가 이미 로드되었으면 resolve 바로 호출
+    if (loadedCount === images.length) resolve();
   });
 };
 
 window.onload = async () => {
-  await waitForImages(); // 모든 이미지가 로드될 때까지 대기
+  // 모든 이미지가 로드될 때까지 기다림
+  await waitForImages();
 
-  // 로딩 바가 100%로 채워지는 애니메이션
+  // 로딩 바 100%로 채운 후
   loadingBar.style.width = '100%';
 
   setTimeout(() => {
@@ -49,10 +52,10 @@ window.onload = async () => {
       loadingImage.style.transform = 'scale(0.6) translate(135%, -135%)';
 
       setTimeout(() => {
-        // 로딩 페이지의 opacity를 0으로 변경
+        // 로딩 페이지 opacity 변경 (애니메이션 시작)
         loadingPage.style.opacity = '0';
 
-        // opacity 애니메이션 완료 후 display: none 적용
+        // opacity 애니메이션 완료 후 로딩 페이지 숨김 처리
         setTimeout(() => {
           loadingPage.style.display = 'none';
         }, 1200); // opacity 애니메이션이 끝난 후 실행
@@ -60,7 +63,6 @@ window.onload = async () => {
     }, 900); // 텍스트 변경 완료 후
   }, 1000); // 로딩 바 100% 채운 후
 };
-
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
 const main_report = document.getElementById('main-report'); 
