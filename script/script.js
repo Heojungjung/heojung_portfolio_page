@@ -1,14 +1,39 @@
-/* 로딩 페이지 */
 const loadingPage = document.getElementById('loading-page');
 const loadingBar = document.querySelector('.loading-bar');
 const loadingText = document.querySelector('.load-text');
 const loadingImage = document.querySelector('.loading-image img');
 
-window.onload = () => {
-  // 로딩 바가 채워지는 애니메이션
-  loadingBar.style.width = '100%'; 
+// 모든 이미지가 로드되었는지 확인
+const waitForImages = () => {
+  return new Promise((resolve) => {
+    const images = document.querySelectorAll('img'); // 페이지 내 모든 이미지 선택
+    let loadedCount = 0;
 
-  // 로딩 애니메이션 순차 실행
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+      } else {
+        img.addEventListener('load', () => {
+          loadedCount++;
+          if (loadedCount === images.length) resolve();
+        });
+        img.addEventListener('error', () => {
+          loadedCount++;
+          if (loadedCount === images.length) resolve();
+        });
+      }
+    });
+
+    if (loadedCount === images.length) resolve(); // 이미 모든 이미지가 로드된 경우
+  });
+};
+
+window.onload = async () => {
+  await waitForImages(); // 모든 이미지가 로드될 때까지 대기
+
+  // 로딩 바가 100%로 채워지는 애니메이션
+  loadingBar.style.width = '100%';
+
   setTimeout(() => {
     // 로딩 이미지 축소 및 이동
     loadingImage.style.transform = 'scale(0.6) translate(-10%, 10%)';
@@ -30,10 +55,10 @@ window.onload = () => {
         setTimeout(() => {
           // 완전히 사라진 후 로딩 페이지 제거
           loadingPage.style.display = 'none';
-        }, 1200);
-      }, 800);
-    }, 900);
-  }, 1000);
+        }, 1200); // opacity 애니메이션 완료 후
+      }, 800); // 이미지 날아가는 애니메이션 완료 후
+    }, 900); // 텍스트 변경 완료 후
+  }, 1000); // 로딩 바 100% 채운 후
 };
 
 
