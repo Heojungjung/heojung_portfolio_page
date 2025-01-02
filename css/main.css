@@ -66,54 +66,13 @@ body {
 }
 
 #loading-page {
-  z-index: 999;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   height: 100vh;
   background-color: black;
-  -webkit-animation: shadowAnimation 1.2s forwards;
-          animation: shadowAnimation 1.2s forwards;
-}
-#loading-page .load-frame {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-#loading-page .load-frame .loading-image img {
-  width: 150px;
-  height: auto;
-  -webkit-animation: scaleUp 1.5s infinite alternate;
-          animation: scaleUp 1.5s infinite alternate;
-}
-#loading-page .load-frame .loading-bar-container {
-  width: 80%;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  margin: 20px 0;
-  overflow: hidden;
-}
-#loading-page .load-frame .loading-bar-container .loading-bar {
-  width: 0;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#4caf50), to(#8bc34a));
-  background: linear-gradient(90deg, #4caf50, #8bc34a);
-  -webkit-animation: loadingBar 5s forwards;
-          animation: loadingBar 5s forwards;
-}
-#loading-page .load-frame .load-text {
+  z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,15 +82,53 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 36px;
-  color: white;
+  opacity: 1;
+  /* 애니메이션 정의 */
+}
+#loading-page .load-frame {
+  position: relative;
+  text-align: center;
+  z-index: 100;
+  /* 로딩 이미지 스타일 */
+  /* 로딩 텍스트 스타일 */
+  /* 로딩 바 스타일 */
+}
+#loading-page .load-frame .loading-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+#loading-page .load-frame .loading-image img {
+  width: 80px;
+  height: auto;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+#loading-page .load-frame .load-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 48px;
   font-weight: bold;
-  font-family: "KimjungchulScript-Bold", sans-serif;
-  margin-top: 20px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
 }
 #loading-page .load-frame .load-text span {
-  -webkit-animation: wave 1.5s infinite ease-in-out;
-          animation: wave 1.5s infinite ease-in-out;
+  -webkit-animation: wave 1s forwards infinite;
+          animation: wave 1s forwards infinite;
 }
 #loading-page .load-frame .load-text span:nth-child(1) {
   -webkit-animation-delay: 0.2s;
@@ -189,8 +186,23 @@ body {
   -webkit-animation-delay: 2.8s;
           animation-delay: 2.8s;
 }
-
-/* 애니메이션 */
+#loading-page .load-frame .loading-bar-container {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+}
+#loading-page .load-frame .loading-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #00ff00;
+  border-radius: 5px;
+  -webkit-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+}
 @-webkit-keyframes wave {
   0% {
     -webkit-transform: translateY(-10px);
@@ -219,43 +231,7 @@ body {
             transform: translateY(10px);
   }
 }
-@-webkit-keyframes loadingBar {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes loadingBar {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes scaleUp {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-@keyframes scaleUp {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-@-webkit-keyframes shadowAnimation {
+@-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -263,7 +239,7 @@ body {
     opacity: 0;
   }
 }
-@keyframes shadowAnimation {
+@keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -271,6 +247,7 @@ body {
     opacity: 0;
   }
 }
+
 body {
   overflow: hidden;
 }

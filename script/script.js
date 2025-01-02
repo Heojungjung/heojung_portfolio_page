@@ -3,23 +3,24 @@ const loadingBar = document.querySelector('.loading-bar');
 const loadingText = document.querySelector('.load-text');
 const loadingImage = document.querySelector('.loading-image img');
 
-// 모든 이미지가 로드되었는지 확인
+// 모든 이미지가 로드되었는지 확인하는 함수
 const waitForImages = () => {
   return new Promise((resolve) => {
-    const images = document.querySelectorAll('img'); // 페이지 내 모든 이미지 선택
+    const images = document.querySelectorAll('img'); // 페이지 내 모든 이미지
     let loadedCount = 0;
 
     images.forEach((img) => {
-      if (img.complete) { // 이미 로딩이 완료된 이미지
+      if (img.complete) { // 이미 로딩 완료된 이미지
         loadedCount++;
       } else {
-        // 이미지가 로딩되면 카운팅하고, 모든 이미지가 로드되었을 때 resolve
         img.addEventListener('load', () => {
           loadedCount++;
+          updateLoadingBar(loadedCount, images.length);
           if (loadedCount === images.length) resolve();
         });
         img.addEventListener('error', () => {
           loadedCount++;
+          updateLoadingBar(loadedCount, images.length);
           if (loadedCount === images.length) resolve();
         });
       }
@@ -30,39 +31,44 @@ const waitForImages = () => {
   });
 };
 
+// 로딩 바 업데이트 함수
+const updateLoadingBar = (loadedCount, totalCount) => {
+  const percentage = (loadedCount / totalCount) * 100;
+  loadingBar.style.width = `${percentage}%`;
+};
+
 window.onload = async () => {
-  // 모든 이미지가 로드될 때까지 기다림
+  // 모든 이미지 로딩이 완료될 때까지 기다리기
   await waitForImages();
 
-  // 로딩 바 100%로 채운 후
-  loadingBar.style.width = '100%';
-
+  // 로딩 바 100%가 될 때까지
   setTimeout(() => {
     // 로딩 이미지 축소 및 이동
     loadingImage.style.transform = 'scale(0.6) translate(-10%, 10%)';
-
-    // 로딩 텍스트 변경
     loadingText.innerHTML = `
       포트폴리오가 도착했습니다!<br>
       <i>본 사이트는 1920x1080 해상도에 최적화되어 있습니다.</i>
     `;
 
+    // 이미지 날아가는 애니메이션
     setTimeout(() => {
-      // 로딩 이미지 날아가는 효과
       loadingImage.style.transform = 'scale(0.6) translate(135%, -135%)';
 
+      // 로딩 페이지 opacity 애니메이션 (서서히 사라지기)
       setTimeout(() => {
-        // 로딩 페이지 opacity 변경 (애니메이션 시작)
+        loadingPage.style.transition = 'opacity 1s ease-out';
         loadingPage.style.opacity = '0';
-
-        // opacity 애니메이션 완료 후 로딩 페이지 숨김 처리
+        
         setTimeout(() => {
           loadingPage.style.display = 'none';
-        }, 1200); // opacity 애니메이션이 끝난 후 실행
-      }, 800); // 이미지 날아가는 애니메이션 완료 후
-    }, 900); // 텍스트 변경 완료 후
-  }, 1000); // 로딩 바 100% 채운 후
+        }, 1000); // opacity가 0이 된 후 로딩 페이지 숨기기
+      }, 800); // 로딩 이미지 날아간 후
+    }, 900); // 텍스트 변경 후
+  }, 1000); // 로딩 바 100% 채우기 후
 };
+
+
+
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
 const main_report = document.getElementById('main-report'); 
