@@ -1,6 +1,5 @@
 const loadingPage = document.getElementById('loading-page');
 const loadingBar = document.querySelector('.loading-bar');
-const loadingText = document.querySelector('.load-text');
 const loadingImage = document.querySelector('.loading-image img');
 
 // 모든 이미지가 로드되었는지 확인하는 함수
@@ -8,26 +7,30 @@ const waitForImages = () => {
   return new Promise((resolve) => {
     const images = document.querySelectorAll('img'); // 페이지 내 모든 이미지
     let loadedCount = 0;
+    const totalImages = images.length;
+
+    // 이미지 개수가 0이면 바로 resolve
+    if (totalImages === 0) {
+      resolve();
+    }
 
     images.forEach((img) => {
       if (img.complete) { // 이미 로딩 완료된 이미지
         loadedCount++;
+        updateLoadingBar(loadedCount, totalImages);
       } else {
         img.addEventListener('load', () => {
           loadedCount++;
-          updateLoadingBar(loadedCount, images.length);
-          if (loadedCount === images.length) resolve();
+          updateLoadingBar(loadedCount, totalImages);
+          if (loadedCount === totalImages) resolve();
         });
         img.addEventListener('error', () => {
           loadedCount++;
-          updateLoadingBar(loadedCount, images.length);
-          if (loadedCount === images.length) resolve();
+          updateLoadingBar(loadedCount, totalImages);
+          if (loadedCount === totalImages) resolve();
         });
       }
     });
-
-    // 모든 이미지가 이미 로드되었으면 resolve 바로 호출
-    if (loadedCount === images.length) resolve();
   });
 };
 
@@ -62,8 +65,6 @@ window.onload = async () => {
     }, 900); // 텍스트 변경 후
   }, 1000); // 로딩 바 100% 채우기 후
 };
-
-
 
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
