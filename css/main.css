@@ -191,8 +191,8 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   height: 10px;
   border-radius: 5px;
-  width: 100%;
-  max-width: 400px;
+  width: 500px;
+  max-width: 500px;
   overflow: hidden;
 }
 #loading-page .load-frame .loading-bar {
