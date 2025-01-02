@@ -1082,6 +1082,9 @@ body {
 .main-container .main-report .report-pages .report-page-02 .sub-info table tr td:last-child {
   border-right: none;
 }
+.main-container .main-report .report-pages .report-page-02 .sub-info .sub-text {
+  margin-top: 20px;
+}
 .main-container .main-report .report-pages .remain-page {
   position: absolute;
   display: none;
