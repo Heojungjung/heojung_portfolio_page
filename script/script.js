@@ -49,18 +49,17 @@ window.onload = async () => {
       loadingImage.style.transform = 'scale(0.6) translate(135%, -135%)';
 
       setTimeout(() => {
-        // 로딩 페이지를 서서히 사라지게 하기
+        // 로딩 페이지의 opacity를 0으로 변경
         loadingPage.style.opacity = '0';
 
+        // opacity 애니메이션 완료 후 display: none 적용
         setTimeout(() => {
-          // 완전히 사라진 후 로딩 페이지 제거
           loadingPage.style.display = 'none';
-        }, 1200); // opacity 애니메이션 완료 후
+        }, 1200); // opacity 애니메이션이 끝난 후 실행
       }, 800); // 이미지 날아가는 애니메이션 완료 후
     }, 900); // 텍스트 변경 완료 후
   }, 1000); // 로딩 바 100% 채운 후
 };
-
 
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
