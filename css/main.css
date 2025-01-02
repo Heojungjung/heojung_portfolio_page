@@ -200,9 +200,10 @@ body {
 }
 #loading-page .load-frame #loading-complete-button {
   display: none;
-  padding: 50px;
+  padding: 10px;
   border: 2px solid #fff;
-  color: fff;
+  color: #fff;
+  font-size: 21px;
   background-color: #000;
   text-align: center;
   -webkit-box-pack: center;
@@ -212,6 +213,7 @@ body {
       -ms-flex-align: baseline;
           align-items: baseline;
   margin-top: 20px;
+  margin: auto;
 }
 @-webkit-keyframes wave {
   0% {
