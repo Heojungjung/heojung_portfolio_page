@@ -1,6 +1,6 @@
 const loadingPage = document.getElementById('loading-page');
 const loadingBar = document.querySelector('.loading-bar');
-const loadingImage = document.querySelector('.loading-image img');
+const loadingCompleteButton = document.getElementById('loading-complete-button');
 
 // 모든 이미지가 로드되었는지 확인하는 함수
 const waitForImages = () => {
@@ -11,8 +11,7 @@ const waitForImages = () => {
 
     // 이미지 개수가 0이면 바로 resolve
     if (totalImages === 0) {
-      resolve(); // 이미지가 없으면 바로 로딩 완료 처리
-      return;
+      resolve();
     }
 
     images.forEach((img) => {
@@ -38,27 +37,33 @@ const waitForImages = () => {
 // 로딩 바 업데이트 함수
 const updateLoadingBar = (loadedCount, totalCount) => {
   const percentage = (loadedCount / totalCount) * 100;
-  loadingBar.style.width = `${percentage}%`; // 로딩 바 업데이트
+  loadingBar.style.width = `${percentage}%`;
+
+  // 로딩이 100%에 도달하면 '로딩 완료' 버튼을 표시
+  if (percentage === 100) {
+    loadingCompleteButton.style.display = 'block';
+  }
+};
+
+// 로딩 완료 버튼 클릭 시 처리 함수
+const handleLoadingComplete = () => {
+  // 로딩 페이지 opacity 애니메이션 (서서히 사라지기)
+  loadingPage.style.transition = 'opacity 1s ease-out';
+  loadingPage.style.opacity = '0';
+
+  // opacity가 0이 된 후 로딩 페이지를 숨김
+  loadingPage.addEventListener('transitionend', () => {
+    loadingPage.style.display = 'none'; // opacity 변화가 끝나면 display를 none으로 설정
+  });
 };
 
 window.onload = async () => {
   // 모든 이미지 로딩이 완료될 때까지 기다리기
   await waitForImages();
-
-  // 로딩 바가 100%가 된 후 로딩 페이지 사라짐
-  setTimeout(() => {
-    // 로딩 페이지 opacity 애니메이션 (서서히 사라지기)
-    loadingPage.style.transition = 'opacity 1s ease-out';
-    loadingPage.style.opacity = '0';
-
-    // opacity가 0이 된 후 로딩 페이지를 숨김
-    loadingPage.addEventListener('transitionend', () => {
-      loadingPage.style.display = 'none'; // opacity 변화가 끝나면 display를 none으로 설정
-    });
-  }, 1000); // 로딩 바 100% 채우기 후
 };
 
-
+// 로딩 완료 버튼 클릭 이벤트 리스너
+loadingCompleteButton.addEventListener('click', handleLoadingComplete);
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
 const main_report = document.getElementById('main-report'); 
