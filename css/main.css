@@ -105,10 +105,8 @@ body {
 #loading-page .load-frame .loading-image img {
   width: 80px;
   height: auto;
-  -webkit-transition: -webkit-transform 0.5s ease-out;
-  transition: -webkit-transform 0.5s ease-out;
-  transition: transform 0.5s ease-out;
-  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  -webkit-animation: walkingAnimation 3s linear infinite;
+          animation: walkingAnimation 3s linear infinite;
 }
 #loading-page .load-frame .load-text {
   position: relative;
@@ -224,6 +222,34 @@ body {
   margin-top: 20px;
   margin: auto;
   cursor: url(../images/hand_cursor.png), auto;
+}
+@-webkit-keyframes walkingAnimation {
+  0% {
+    -webkit-transform: translateX(0) scaleY(1);
+            transform: translateX(0) scaleY(1); /* 처음 위치에서 걷기 전 상태 */
+  }
+  50% {
+    -webkit-transform: translateX(50px) scaleY(-1);
+            transform: translateX(50px) scaleY(-1); /* 반대방향으로 걷는 느낌을 주기 위한 회전 */
+  }
+  100% {
+    -webkit-transform: translateX(100px) scaleY(1);
+            transform: translateX(100px) scaleY(1); /* 원래 상태로 돌아가며 이동 */
+  }
+}
+@keyframes walkingAnimation {
+  0% {
+    -webkit-transform: translateX(0) scaleY(1);
+            transform: translateX(0) scaleY(1); /* 처음 위치에서 걷기 전 상태 */
+  }
+  50% {
+    -webkit-transform: translateX(50px) scaleY(-1);
+            transform: translateX(50px) scaleY(-1); /* 반대방향으로 걷는 느낌을 주기 위한 회전 */
+  }
+  100% {
+    -webkit-transform: translateX(100px) scaleY(1);
+            transform: translateX(100px) scaleY(1); /* 원래 상태로 돌아가며 이동 */
+  }
 }
 @-webkit-keyframes wave {
   0% {

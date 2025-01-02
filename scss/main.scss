@@ -44,7 +44,7 @@ body{
     .loading-image img {
       width: 80px;
       height: auto;
-      transition: transform 0.5s ease-out;
+      animation: walkingAnimation 3s linear infinite;  
     }
 
     /* 로딩 텍스트 스타일 */
@@ -113,6 +113,19 @@ body{
       cursor: url(../images/hand_cursor.png),auto;
     }
   }
+
+  @keyframes walkingAnimation {
+    0% {
+      transform: translateX(0) scaleY(1);  /* 처음 위치에서 걷기 전 상태 */
+    }
+    50% {
+      transform: translateX(50px) scaleY(-1);  /* 반대방향으로 걷는 느낌을 주기 위한 회전 */
+    }
+    100% {
+      transform: translateX(100px) scaleY(1);  /* 원래 상태로 돌아가며 이동 */
+    }
+  }
+
 
   /* 애니메이션 정의 */
   @keyframes wave {
