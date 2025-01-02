@@ -55,12 +55,12 @@ window.onload = async () => {
 
       // 로딩 페이지 opacity 애니메이션 (서서히 사라지기)
       setTimeout(() => {
-        loadingPage.style.transition = 'opacity 1s ease-out';
-        loadingPage.style.opacity = '0';
-        
+        loadingPage.style.transition = 'opacity 1s ease-out'; // 애니메이션을 적용하여 서서히 사라짐
+        loadingPage.style.opacity = '0'; // 로딩 페이지의 opacity 값을 0으로 설정
+
         setTimeout(() => {
-          loadingPage.style.display = 'none';
-        }, 1000); // opacity가 0이 된 후 로딩 페이지 숨기기
+          loadingPage.style.display = 'none'; // opacity가 0이 된 후 로딩 페이지를 숨김
+        }, 1000); // opacity가 0이 된 후에 1초 뒤에 display를 none으로 설정
       }, 800); // 로딩 이미지 날아간 후
     }, 900); // 텍스트 변경 후
   }, 1000); // 로딩 바 100% 채우기 후
