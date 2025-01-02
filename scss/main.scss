@@ -40,12 +40,29 @@ body{
     flex-direction: column;
     gap: 20px;
 
-    /* 로딩 이미지 스타일 */
-    .loading-image img {
+   /* 로딩 이미지 스타일 (발자국 2개) */
+   .loading-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 발자국 1: 기본 이미지 */
+    .footprint-1 {
       width: 80px;
       height: auto;
-      animation: walkingAnimation 3s linear infinite;  
+      animation: walkingAnimation1 4s ease-in-out infinite;
     }
+
+    /* 발자국 2: 상하 반전된 이미지 */
+    .footprint-2 {
+      width: 80px;
+      height: auto;
+      transform: rotateX(180deg);  /* 상하 반전 */
+      animation: walkingAnimation2 4s ease-in-out infinite;
+    }
+  }
+
 
     /* 로딩 텍스트 스타일 */
     .load-text {
@@ -114,18 +131,49 @@ body{
     }
   }
 
-  @keyframes walkingAnimation {
+
+  /* 발자국 애니메이션 정의 */
+  @keyframes walkingAnimation1 {
     0% {
-      transform: translateX(0) scaleY(1);  /* 처음 위치에서 걷기 전 상태 */
+      transform: translateX(0) translateY(0) rotate(0deg);
     }
-    50% {
-      transform: translateX(50px) scaleY(-1);  /* 반대방향으로 걷는 느낌을 주기 위한 회전 */
+    20% {
+      transform: translateX(20px) translateY(5px) rotate(5deg);
+    }
+    40% {
+      transform: translateX(40px) translateY(0) rotate(0deg);
+    }
+    60% {
+      transform: translateX(60px) translateY(-5px) rotate(-5deg);
+    }
+    80% {
+      transform: translateX(80px) translateY(0) rotate(0deg);
     }
     100% {
-      transform: translateX(100px) scaleY(1);  /* 원래 상태로 돌아가며 이동 */
+      transform: translateX(100px) translateY(5px) rotate(5deg);
     }
   }
 
+  @keyframes walkingAnimation2 {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    20% {
+      transform: translateX(20px) translateY(5px) rotate(5deg);
+    }
+    40% {
+      transform: translateX(40px) translateY(0) rotate(0deg);
+    }
+    60% {
+      transform: translateX(60px) translateY(-5px) rotate(-5deg);
+    }
+    80% {
+      transform: translateX(80px) translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateX(100px) translateY(5px) rotate(5deg);
+    }
+  }
 
   /* 애니메이션 정의 */
   @keyframes wave {

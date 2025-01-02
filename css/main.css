@@ -84,6 +84,7 @@ body {
           align-items: center;
   opacity: 1;
   cursor: auto;
+  /* 발자국 애니메이션 정의 */
   /* 애니메이션 정의 */
 }
 #loading-page .load-frame {
@@ -98,15 +99,37 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  /* 로딩 이미지 스타일 */
+  /* 로딩 이미지 스타일 (발자국 2개) */
   /* 로딩 텍스트 스타일 */
   /* 로딩 바 스타일 */
 }
-#loading-page .load-frame .loading-image img {
+#loading-page .load-frame .loading-image {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 발자국 1: 기본 이미지 */
+  /* 발자국 2: 상하 반전된 이미지 */
+}
+#loading-page .load-frame .loading-image .footprint-1 {
   width: 80px;
   height: auto;
-  -webkit-animation: walkingAnimation 3s linear infinite;
-          animation: walkingAnimation 3s linear infinite;
+  -webkit-animation: walkingAnimation1 4s ease-in-out infinite;
+          animation: walkingAnimation1 4s ease-in-out infinite;
+}
+#loading-page .load-frame .loading-image .footprint-2 {
+  width: 80px;
+  height: auto;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg); /* 상하 반전 */
+  -webkit-animation: walkingAnimation2 4s ease-in-out infinite;
+          animation: walkingAnimation2 4s ease-in-out infinite;
 }
 #loading-page .load-frame .load-text {
   position: relative;
@@ -223,32 +246,108 @@ body {
   margin: auto;
   cursor: url(../images/hand_cursor.png), auto;
 }
-@-webkit-keyframes walkingAnimation {
+@-webkit-keyframes walkingAnimation1 {
   0% {
-    -webkit-transform: translateX(0) scaleY(1);
-            transform: translateX(0) scaleY(1); /* 처음 위치에서 걷기 전 상태 */
+    -webkit-transform: translateX(0) translateY(0) rotate(0deg);
+            transform: translateX(0) translateY(0) rotate(0deg);
   }
-  50% {
-    -webkit-transform: translateX(50px) scaleY(-1);
-            transform: translateX(50px) scaleY(-1); /* 반대방향으로 걷는 느낌을 주기 위한 회전 */
+  20% {
+    -webkit-transform: translateX(20px) translateY(5px) rotate(5deg);
+            transform: translateX(20px) translateY(5px) rotate(5deg);
+  }
+  40% {
+    -webkit-transform: translateX(40px) translateY(0) rotate(0deg);
+            transform: translateX(40px) translateY(0) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translateX(60px) translateY(-5px) rotate(-5deg);
+            transform: translateX(60px) translateY(-5px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translateX(80px) translateY(0) rotate(0deg);
+            transform: translateX(80px) translateY(0) rotate(0deg);
   }
   100% {
-    -webkit-transform: translateX(100px) scaleY(1);
-            transform: translateX(100px) scaleY(1); /* 원래 상태로 돌아가며 이동 */
+    -webkit-transform: translateX(100px) translateY(5px) rotate(5deg);
+            transform: translateX(100px) translateY(5px) rotate(5deg);
   }
 }
-@keyframes walkingAnimation {
+@keyframes walkingAnimation1 {
   0% {
-    -webkit-transform: translateX(0) scaleY(1);
-            transform: translateX(0) scaleY(1); /* 처음 위치에서 걷기 전 상태 */
+    -webkit-transform: translateX(0) translateY(0) rotate(0deg);
+            transform: translateX(0) translateY(0) rotate(0deg);
   }
-  50% {
-    -webkit-transform: translateX(50px) scaleY(-1);
-            transform: translateX(50px) scaleY(-1); /* 반대방향으로 걷는 느낌을 주기 위한 회전 */
+  20% {
+    -webkit-transform: translateX(20px) translateY(5px) rotate(5deg);
+            transform: translateX(20px) translateY(5px) rotate(5deg);
+  }
+  40% {
+    -webkit-transform: translateX(40px) translateY(0) rotate(0deg);
+            transform: translateX(40px) translateY(0) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translateX(60px) translateY(-5px) rotate(-5deg);
+            transform: translateX(60px) translateY(-5px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translateX(80px) translateY(0) rotate(0deg);
+            transform: translateX(80px) translateY(0) rotate(0deg);
   }
   100% {
-    -webkit-transform: translateX(100px) scaleY(1);
-            transform: translateX(100px) scaleY(1); /* 원래 상태로 돌아가며 이동 */
+    -webkit-transform: translateX(100px) translateY(5px) rotate(5deg);
+            transform: translateX(100px) translateY(5px) rotate(5deg);
+  }
+}
+@-webkit-keyframes walkingAnimation2 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0) rotate(0deg);
+            transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translateX(20px) translateY(5px) rotate(5deg);
+            transform: translateX(20px) translateY(5px) rotate(5deg);
+  }
+  40% {
+    -webkit-transform: translateX(40px) translateY(0) rotate(0deg);
+            transform: translateX(40px) translateY(0) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translateX(60px) translateY(-5px) rotate(-5deg);
+            transform: translateX(60px) translateY(-5px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translateX(80px) translateY(0) rotate(0deg);
+            transform: translateX(80px) translateY(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateX(100px) translateY(5px) rotate(5deg);
+            transform: translateX(100px) translateY(5px) rotate(5deg);
+  }
+}
+@keyframes walkingAnimation2 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0) rotate(0deg);
+            transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translateX(20px) translateY(5px) rotate(5deg);
+            transform: translateX(20px) translateY(5px) rotate(5deg);
+  }
+  40% {
+    -webkit-transform: translateX(40px) translateY(0) rotate(0deg);
+            transform: translateX(40px) translateY(0) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translateX(60px) translateY(-5px) rotate(-5deg);
+            transform: translateX(60px) translateY(-5px) rotate(-5deg);
+  }
+  80% {
+    -webkit-transform: translateX(80px) translateY(0) rotate(0deg);
+            transform: translateX(80px) translateY(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateX(100px) translateY(5px) rotate(5deg);
+            transform: translateX(100px) translateY(5px) rotate(5deg);
   }
 }
 @-webkit-keyframes wave {
