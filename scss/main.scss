@@ -95,7 +95,7 @@ body{
     .loading-bar {
       height: 100%;
       width: 0%;
-      background-color: #00ff00; // 로딩 바 색상
+      background-color: #ffffff; // 로딩 바 색상
       border-radius: 5px;
       transition: width 1s ease-out; // 애니메이션을 위한 transition
     }
