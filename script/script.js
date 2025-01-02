@@ -1,6 +1,9 @@
 const loadingPage = document.getElementById('loading-page');
 const loadingBar = document.querySelector('.loading-bar');
 const loadingImage = document.querySelector('.loading-image img');
+const loadingText = document.getElementById('loading-text');
+const loadingPercent = document.getElementById('loading-percent');
+const remainingImagesText = document.getElementById('remaining-images');
 
 // 모든 이미지가 로드되었는지 확인하는 함수
 const waitForImages = () => {
@@ -22,11 +25,13 @@ const waitForImages = () => {
         img.addEventListener('load', () => {
           loadedCount++;
           updateLoadingBar(loadedCount, totalImages);
+          updateLoadingStatus(loadedCount, totalImages); // 상태 업데이트
           if (loadedCount === totalImages) resolve();
         });
         img.addEventListener('error', () => {
           loadedCount++;
           updateLoadingBar(loadedCount, totalImages);
+          updateLoadingStatus(loadedCount, totalImages); // 상태 업데이트
           if (loadedCount === totalImages) resolve();
         });
       }
@@ -38,6 +43,18 @@ const waitForImages = () => {
 const updateLoadingBar = (loadedCount, totalCount) => {
   const percentage = (loadedCount / totalCount) * 100;
   loadingBar.style.width = `${percentage}%`;
+  loadingPercent.textContent = `${Math.round(percentage)}%`; // 퍼센트 표시
+};
+
+// 로딩 상태 업데이트 함수
+const updateLoadingStatus = (loadedCount, totalCount) => {
+  const remainingCount = totalCount - loadedCount;
+
+  if (remainingCount > 0) {
+    loadingText.textContent = `로딩 중 (남은 이미지 ${remainingCount}개)`;
+  } else if (remainingCount === 0) {
+    loadingText.textContent = "로딩 완료!";
+  }
 };
 
 window.onload = async () => {

@@ -203,6 +203,27 @@ body {
   -webkit-transition: width 1s ease-out;
   transition: width 1s ease-out;
 }
+#loading-page .load-frame #loading-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+#loading-page .load-frame #loading-percent {
+  font-weight: bold;
+  margin-left: 10px;
+}
+#loading-page .load-frame #remaining-images {
+  margin-left: 20px;
+}
 @-webkit-keyframes wave {
   0% {
     -webkit-transform: translateY(-10px);
