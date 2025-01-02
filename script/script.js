@@ -62,9 +62,10 @@ window.onload = async () => {
           loadingPage.style.display = 'none'; // opacity가 0이 된 후 로딩 페이지를 숨김
         }, 1000); // opacity가 0이 된 후에 1초 뒤에 display를 none으로 설정
       }, 800); // 로딩 이미지 날아간 후
-    }, 900); // 텍스트 변경 후
+    }, 900); // 이미지 축소 후
   }, 1000); // 로딩 바 100% 채우기 후
 };
+
 
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
