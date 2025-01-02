@@ -45,11 +45,7 @@ window.onload = async () => {
   setTimeout(() => {
     // 로딩 이미지 축소 및 이동
     loadingImage.style.transform = 'scale(0.6) translate(-10%, 10%)';
-    loadingText.innerHTML = `
-      포트폴리오가 도착했습니다!<br>
-      <i>본 사이트는 1920x1080 해상도에 최적화되어 있습니다.</i>
-    `;
-
+    
     // 이미지 날아가는 애니메이션
     setTimeout(() => {
       loadingImage.style.transform = 'scale(0.6) translate(135%, -135%)';
