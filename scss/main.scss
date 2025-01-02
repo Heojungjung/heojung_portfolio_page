@@ -136,37 +136,37 @@ body{
   /* 발자국 애니메이션 정의 */
   @keyframes walkingAnimation1 {
     0% {
-      transform: translateX(0) translateY(0);
+      transform: translateX(0);
     }
     25% {
-      transform: translateX(20px) translateY(5px);
+      transform: translateX(20px);
     }
     50% {
-      transform: translateX(40px) translateY(0);
+      transform: translateX(40px);
     }
     75% {
-      transform: translateX(60px) translateY(-5px);
+      transform: translateX(60px);
     }
     100% {
-      transform: translateX(80px) translateY(0);
+      transform: translateX(80px);
     }
   }
 
   @keyframes walkingAnimation2 {
     0% {
-      transform: translateX(0) translateY(0);
+      transform: translateX(0);
     }
     25% {
-      transform: translateX(20px) translateY(5px);
+      transform: translateX(20px);
     }
     50% {
-      transform: translateX(40px) translateY(0);
+      transform: translateX(40px);
     }
     75% {
-      transform: translateX(60px) translateY(-5px);
+      transform: translateX(60px);
     }
     100% {
-      transform: translateX(80px) translateY(0);
+      transform: translateX(80px);
     }
   }
   /* 애니메이션 정의 */
