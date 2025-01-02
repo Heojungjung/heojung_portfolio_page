@@ -1085,6 +1085,12 @@ body {
 .main-container .main-report .report-pages .report-page-02 .sub-info .sub-text {
   margin-top: 20px;
 }
+.main-container .main-report .report-pages .report-page-02 .sub-info .sub-text h3 {
+  font-weight: 300;
+}
+.main-container .main-report .report-pages .report-page-02 .sub-info .sub-text h3 b {
+  color: #C92D2D;
+}
 .main-container .main-report .report-pages .remain-page {
   position: absolute;
   display: none;
