@@ -59,6 +59,7 @@ body{
       width: 80px;
       height: auto;
       transform: rotateX(180deg); 
+      margin-left: 60px;
       animation: walkingAnimation2 4s ease-in-out infinite;
     }
   }
@@ -152,19 +153,19 @@ body{
 
   @keyframes walkingAnimation2 {
     0% {
-      transform: translateX(0) translateY(0) rotateX(180deg);
+      transform: translateX(0) translateY(0) rotateX(0deg);
     }
     25% {
-      transform: translateX(20px) translateY(5px) rotateX(0deg);
+      transform: translateX(20px) translateY(5px) rotateX(180deg);
     }
     50% {
-      transform: translateX(40px) translateY(0) rotateX(180deg);
+      transform: translateX(40px) translateY(0) rotateX(0deg);
     }
     75% {
-      transform: translateX(60px) translateY(-5px) rotateX(0deg);
+      transform: translateX(60px) translateY(-5px) rotateX(180deg);
     }
     100% {
-      transform: translateX(80px) translateY(0) rotateX(180deg);
+      transform: translateX(80px) translateY(0) rotateX(0deg);
     }
   }
   /* 애니메이션 정의 */
