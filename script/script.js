@@ -50,7 +50,7 @@ main_photo.addEventListener('click',function(){
 
 /* 마우스 커서 옵션 */ 
 main_photo.addEventListener('mouseenter', function () {
-  main_photo.style.cursor = "url('/images/zoom_cursor.png'), auto"; 
+  main_photo.style.cursor = "url('../images/zoom_cursor.png'), auto"; 
 });
 
 main_photo.addEventListener('mouseleave', function () {
@@ -58,7 +58,7 @@ main_photo.addEventListener('mouseleave', function () {
 });
 
 page_tag_01.addEventListener('mouseenter', function () {
-  page_tag_01.style.cursor = "url('/images/hand_cursor.png'), auto"; 
+  page_tag_01.style.cursor = "url('../images/hand_cursor.png'), auto"; 
 });
 
 page_tag_01.addEventListener('mouseleave', function () {
@@ -66,7 +66,7 @@ page_tag_01.addEventListener('mouseleave', function () {
 });
 
 page_tag_02.addEventListener('mouseenter', function () {
-  page_tag_02.style.cursor = "url('/images/hand_cursor.png'), auto"; 
+  page_tag_02.style.cursor = "url('../images/hand_cursor.png'), auto"; 
 });
 
 page_tag_02.addEventListener('mouseleave', function () {
