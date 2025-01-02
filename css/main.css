@@ -943,7 +943,7 @@ body {
   right: -2.5%;
   top: 15%;
   z-index: 105;
-  cursor: url("../images/hand_cursor.png"), auto;
+  cursor: url(../images/hand_cursor.png), auto;
   padding: 5px 15px;
   border-radius: 0px 15px 15px 0px;
   -webkit-writing-mode: vertical-lr;
@@ -979,7 +979,7 @@ body {
   right: -2.5%;
   top: 20%;
   z-index: 103;
-  cursor: url("../images/hand_cursor.png"), auto;
+  cursor: url(../images/hand_cursor.png), auto;
   padding: 15px;
   border-radius: 0px 15px 15px 0px;
   -webkit-writing-mode: vertical-lr;
@@ -8274,7 +8274,7 @@ body {
   left: 45%;
   width: 45px;
   height: 45px;
-  background-image: url(../images//red_pin.png);
+  background-image: url(../images/red_pin.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -8297,7 +8297,7 @@ body {
   left: 45%;
   width: 45px;
   height: 45px;
-  background-image: url(../images//red_pin.png);
+  background-image: url(../images/red_pin.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -8388,7 +8388,7 @@ body {
   left: 45%;
   width: 45px;
   height: 45px;
-  background-image: url(../images//red_pin.png);
+  background-image: url(../images/red_pin.png);
   background-repeat: no-repeat;
   background-size: contain;
 }

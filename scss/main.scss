@@ -161,7 +161,7 @@ body{
           box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.5);
           rotate: -7deg;
           z-index: 100;
-          cursor: url(../images/zoom_cursor.png), auto;
+          cursor: url(../images/zoom_cursor.png),auto;
           &:hover{
             scale: 1.2;
             transition: 1s;
@@ -684,7 +684,7 @@ body{
         right: -2.5%;
         top: 15%;  
         z-index: 105;
-        cursor: url('../images/hand_cursor.png'), auto;
+        cursor: url(../images/hand_cursor.png),auto;
         padding: 5px 15px;
         border-radius: 0px 15px 15px 0px;
         writing-mode: vertical-lr;
@@ -711,7 +711,7 @@ body{
         right: -2.5%;
         top: 20%;  
         z-index: 103;
-        cursor: url('../images/hand_cursor.png'), auto;
+        cursor: url(../images/hand_cursor.png),auto;
         padding: 15px;
         border-radius: 0px 15px 15px 0px;
         writing-mode: vertical-lr;
@@ -6576,7 +6576,7 @@ body{
         left: 45%;
         width: 45px;
         height: 45px;
-        background-image: url(../images//red_pin.png);
+        background-image: url(../images/red_pin.png);
         background-repeat: no-repeat;
         background-size: contain;
       }
@@ -6599,7 +6599,7 @@ body{
         left: 45%;
         width: 45px;
         height: 45px;
-        background-image: url(../images//red_pin.png);
+        background-image: url(../images/red_pin.png);
         background-repeat: no-repeat;
         background-size: contain;
       }
@@ -6672,7 +6672,7 @@ body{
         left: 45%;
         width: 45px;
         height: 45px;
-        background-image: url(../images//red_pin.png);
+        background-image: url(../images/red_pin.png);
         background-repeat: no-repeat;
         background-size: contain;
       }
