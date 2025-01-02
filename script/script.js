@@ -127,7 +127,7 @@ report_photo.addEventListener('click',function(){
 })
 
 report_photo.addEventListener('mouseenter',function(){
-  report_photo.style.cursor = "url('/images/hand_cursor.png'), auto"; 
+  report_photo.style.cursor = "url('./images/hand_cursor.png'), auto"; 
 })
 report_photo.addEventListener('mouseleave',function(){
   report_photo.style.cursor = "auto"; 
