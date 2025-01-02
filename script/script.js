@@ -44,27 +44,16 @@ window.onload = async () => {
   // 모든 이미지 로딩이 완료될 때까지 기다리기
   await waitForImages();
 
-  // 로딩 바가 100%가 된 후 로딩 이미지와 로딩 페이지 애니메이션 시작
+  // 로딩 바가 100%가 된 후 로딩 페이지 사라짐
   setTimeout(() => {
-    // 로딩 이미지 축소 및 이동
-    loadingImage.style.transform = 'scale(0.6) translate(-10%, 10%)';
-    
-    // 이미지 날아가는 애니메이션 (이 후 로딩 페이지가 서서히 사라짐)
-    setTimeout(() => {
-      loadingImage.style.transform = 'scale(0.6) translate(135%, -135%)';
+    // 로딩 페이지 opacity 애니메이션 (서서히 사라지기)
+    loadingPage.style.transition = 'opacity 1s ease-out';
+    loadingPage.style.opacity = '0';
 
-      // 로딩 페이지 opacity 애니메이션 (서서히 사라지기)
-      setTimeout(() => {
-        // opacity를 0으로 변경하여 서서히 사라지게 하기
-        loadingPage.style.transition = 'opacity 1s ease-out';
-        loadingPage.style.opacity = '0';
-
-        // opacity가 0이 된 후 로딩 페이지를 숨김
-        loadingPage.addEventListener('transitionend', () => {
-          loadingPage.style.display = 'none'; // opacity 변화가 끝나면 display를 none으로 설정
-        });
-      }, 800); // 로딩 이미지 날아간 후
-    }, 900); // 이미지 축소 후
+    // opacity가 0이 된 후 로딩 페이지를 숨김
+    loadingPage.addEventListener('transitionend', () => {
+      loadingPage.style.display = 'none'; // opacity 변화가 끝나면 display를 none으로 설정
+    });
   }, 1000); // 로딩 바 100% 채우기 후
 };
 
