@@ -18,72 +18,100 @@ body{
   cursor: url(../images/hand_cursor.png),auto;
 }
 
-.load-frame{
-  z-index: 999;
-  position: absolute;
+#loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
   height: 100vh;
   background-color: black;
-  animation: shadowAnimation 5s forwards; 
-  .load-text{
-    position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: shadowAnimation 5s forwards;
+
+  .load-frame {
     display: flex;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 48px;
-    color: white;
-    font-weight: bold;
-    animation: shadowAnimation 4.4s forwards; 
-    span{
-      font-family: $Primary-Kr-Bold;
-      animation: wave 1s forwards infinite; 
-      &:nth-child(1) { animation-delay: 0.2s; }
-      &:nth-child(2) { animation-delay: 0.4s; }
-      &:nth-child(3) { animation-delay: 0.6s; }
-      &:nth-child(4) { animation-delay: 0.8s; }
-      &:nth-child(5) { animation-delay: 1.0s; }
-      &:nth-child(6) { animation-delay: 1.2s; }
-      &:nth-child(7) { animation-delay: 1.4s; }
-      &:nth-child(8) { animation-delay: 1.6s; }
-      &:nth-child(9) { animation-delay: 1.8s; }
-      &:nth-child(10) { animation-delay: 2.0s; }
-      &:nth-child(11) { animation-delay: 2.2s; }
-      &:nth-child(12) { animation-delay: 2.4s; }
-      &:nth-child(13) { animation-delay: 2.6s; }
-      &:nth-child(14) { animation-delay: 2.8s; }
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .loading-image img {
+      width: 150px;
+      height: auto;
+      animation: scaleUp 1.5s infinite alternate;
     }
-    /* 애니메이션 정의 */
-    @keyframes wave {
-      0% {
-          transform: translateY(-10px); /* 아래로 이동 */
+
+    .loading-bar-container {
+      width: 80%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      margin: 20px 0;
+      overflow: hidden;
+
+      .loading-bar {
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, #4caf50, #8bc34a);
+        animation: loadingBar 5s forwards;
       }
-      50% {
-          transform: translateY(0); /* 원래 위치로 */
-      }
-      100% {
-          transform: translateY(10px); /* 위로 이동 */
+    }
+
+    .load-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      color: white;
+      font-weight: bold;
+      font-family: $Primary-Kr-Bold;
+      margin-top: 20px;
+
+      span {
+        animation: wave 1.5s infinite ease-in-out;
+        &:nth-child(1) { animation-delay: 0.2s; }
+        &:nth-child(2) { animation-delay: 0.4s; }
+        &:nth-child(3) { animation-delay: 0.6s; }
+        &:nth-child(4) { animation-delay: 0.8s; }
+        &:nth-child(5) { animation-delay: 1.0s; }
+        &:nth-child(6) { animation-delay: 1.2s; }
+        &:nth-child(7) { animation-delay: 1.4s; }
+        &:nth-child(8) { animation-delay: 1.6s; }
+        &:nth-child(9) { animation-delay: 1.8s; }
+        &:nth-child(10) { animation-delay: 2.0s; }
+        &:nth-child(11) { animation-delay: 2.2s; }
+        &:nth-child(12) { animation-delay: 2.4s; }
+        &:nth-child(13) { animation-delay: 2.6s; }
+        &:nth-child(14) { animation-delay: 2.8s; }
       }
     }
   }
 }
 
-@keyframes shadowAnimation {
-  0% {
-    opacity: 1;
-  }
-  75%{
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
+/* 애니메이션 */
+@keyframes wave {
+  0% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
 }
+
+@keyframes loadingBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes shadowAnimation {
+  0% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
 
 body{
   overflow:hidden;
