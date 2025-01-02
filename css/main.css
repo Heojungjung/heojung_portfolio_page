@@ -198,6 +198,21 @@ body {
   -webkit-transition: width 1s ease-out;
   transition: width 1s ease-out;
 }
+#loading-page .load-frame #loading-complete-button {
+  display: none;
+  padding: 50px;
+  border: 2px solid #fff;
+  color: fff;
+  background-color: #000;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 20px;
+}
 @-webkit-keyframes wave {
   0% {
     -webkit-transform: translateY(-10px);

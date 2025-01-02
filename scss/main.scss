@@ -94,6 +94,17 @@ body{
       border-radius: 5px;
       transition: width 1s ease-out; // 애니메이션을 위한 transition
     }
+    #loading-complete-button{
+      display: none;
+      padding: 50px;
+      border: 2px solid #fff;
+      color: fff;
+      background-color: #000;
+      text-align: center;
+      justify-content: center;
+      align-items: baseline;
+      margin-top: 20px;
+    }
   }
 
   /* 애니메이션 정의 */
