@@ -57,6 +57,7 @@ window.onload = async () => {
   }, 1000); // 로딩 바 100% 채우기 후
 };
 
+
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
 const main_report = document.getElementById('main-report'); 
