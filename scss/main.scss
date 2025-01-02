@@ -36,12 +36,6 @@ body{
     text-align: center;
     z-index: 100;
     
-    .loading-container {
-      position: relative;
-      width: 100%;
-      max-width: 500px; // 최대 너비 설정
-    }
-
     /* 로딩 이미지 스타일 */
     .loading-image img {
       width: 80px;
@@ -99,23 +93,6 @@ body{
       background-color: #ffffff; // 로딩 바 색상
       border-radius: 5px;
       transition: width 1s ease-out; // 애니메이션을 위한 transition
-    }
-    #loading-status {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      font-size: 18px;
-      color: #fff;
-    }
-    
-    #loading-percent {
-      font-weight: bold;
-      margin-left: 10px;
-    }
-    
-    #remaining-images {
-      margin-left: 20px;
     }
   }
 

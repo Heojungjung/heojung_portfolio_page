@@ -93,11 +93,6 @@ body {
   /* 로딩 텍스트 스타일 */
   /* 로딩 바 스타일 */
 }
-#loading-page .load-frame .loading-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-}
 #loading-page .load-frame .loading-image img {
   width: 80px;
   height: auto;
@@ -202,27 +197,6 @@ body {
   border-radius: 5px;
   -webkit-transition: width 1s ease-out;
   transition: width 1s ease-out;
-}
-#loading-page .load-frame #loading-status {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
-  font-size: 18px;
-  color: #fff;
-}
-#loading-page .load-frame #loading-percent {
-  font-weight: bold;
-  margin-left: 10px;
-}
-#loading-page .load-frame #remaining-images {
-  margin-left: 20px;
 }
 @-webkit-keyframes wave {
   0% {
