@@ -1,3 +1,42 @@
+/* 로딩 페이지 */
+const loadingPage = document.getElementById('loading-page');
+const loadingBar = document.querySelector('.loading-bar');
+const loadingText = document.querySelector('.load-text');
+const loadingImage = document.querySelector('.loading-image img');
+
+window.onload = () => {
+  // 로딩 바가 채워지는 애니메이션
+  loadingBar.style.width = '100%'; 
+
+  // 로딩 애니메이션 순차 실행
+  setTimeout(() => {
+    // 로딩 이미지 축소 및 이동
+    loadingImage.style.transform = 'scale(0.6) translate(-10%, 10%)';
+
+    // 로딩 텍스트 변경
+    loadingText.innerHTML = `
+      포트폴리오가 도착했습니다!<br>
+      <i>본 사이트는 1920x1080 해상도에 최적화되어 있습니다.</i>
+    `;
+
+    setTimeout(() => {
+      // 로딩 이미지 날아가는 효과
+      loadingImage.style.transform = 'scale(0.6) translate(135%, -135%)';
+
+      setTimeout(() => {
+        // 로딩 페이지를 서서히 사라지게 하기
+        loadingPage.style.opacity = '0';
+
+        setTimeout(() => {
+          // 완전히 사라진 후 로딩 페이지 제거
+          loadingPage.style.display = 'none';
+        }, 1200);
+      }, 800);
+    }, 900);
+  }, 1000);
+};
+
+
 /* 메인 이미지 */
 const main_photo = document.getElementById('main-photo');
 const main_report = document.getElementById('main-report'); 
