@@ -2,20 +2,18 @@ const loadingPage = document.getElementById('loading-page');
 const loadingBar = document.querySelector('.loading-bar');
 const loadingCompleteButton = document.getElementById('loading-complete-button');
 
-// 모든 이미지가 로드되었는지 확인하는 함수
 const waitForImages = () => {
   return new Promise((resolve) => {
-    const images = document.querySelectorAll('img'); // 페이지 내 모든 이미지
+    const images = document.querySelectorAll('img'); 
     let loadedCount = 0;
     const totalImages = images.length;
 
-    // 이미지 개수가 0이면 바로 resolve
     if (totalImages === 0) {
       resolve();
     }
 
     images.forEach((img) => {
-      if (img.complete) { // 이미 로딩 완료된 이미지
+      if (img.complete) { 
         loadedCount++;
         updateLoadingBar(loadedCount, totalImages);
       } else {
@@ -34,31 +32,25 @@ const waitForImages = () => {
   });
 };
 
-// 로딩 바 업데이트 함수
 const updateLoadingBar = (loadedCount, totalCount) => {
   const percentage = (loadedCount / totalCount) * 100;
   loadingBar.style.width = `${percentage}%`;
 
-  // 로딩이 100%에 도달하면 '로딩 완료' 버튼을 표시
   if (percentage === 100) {
     loadingCompleteButton.style.display = 'block';
   }
 };
 
-// 로딩 완료 버튼 클릭 시 처리 함수
 const handleLoadingComplete = () => {
-  // 로딩 페이지 opacity 애니메이션 (서서히 사라지기)
   loadingPage.style.transition = 'opacity 1s ease-out';
   loadingPage.style.opacity = '0';
 
-  // opacity가 0이 된 후 로딩 페이지를 숨김
   loadingPage.addEventListener('transitionend', () => {
-    loadingPage.style.display = 'none'; // opacity 변화가 끝나면 display를 none으로 설정
+    loadingPage.style.display = 'none'; 
   });
 };
 
 window.onload = async () => {
-  // 모든 이미지 로딩이 완료될 때까지 기다리기
   await waitForImages();
 };
 
@@ -193,7 +185,7 @@ report_photo.addEventListener('click',function(){
 })
 
 report_photo.addEventListener('mouseenter',function(){
-  report_photo.style.cursor = "url('./images/hand_cursor.png'), auto"; 
+  report_photo.style.cursor = "url('images/hand_cursor.png'), auto"; 
 })
 report_photo.addEventListener('mouseleave',function(){
   report_photo.style.cursor = "auto"; 
@@ -673,6 +665,7 @@ document.addEventListener('DOMContentLoaded', function () {
     after_img_01.classList.add('active');
     after_postit_01.style.display = 'flex';
     after_postit_01.classList.add('active');
+    before_text_file01.style.display = 'none';
     })
 
   after_img_01.addEventListener('click',function(){
@@ -837,6 +830,7 @@ document.addEventListener('DOMContentLoaded', function () {
       file02_after_main_img_01.classList.add('active');
       file02_after_main_postit_01.style.display = 'flex';
       file02_after_main_postit_01.classList.add('active');
+      before_text_file02.style.display = 'none';
     })
     file02_after_main_img_01.addEventListener('click',function(){
       modal.classList.add('active');
@@ -1102,3 +1096,18 @@ ing_project.addEventListener('click',function(){
   modal.classList.add('active');
   ing_project_modal.classList.add('active');
 });
+
+
+const file01_callto_before_page = document.getElementById('file-01-callto-before-page');
+const before_text_file01 = document.getElementById('before-text-file01');
+
+file01_callto_before_page.addEventListener('click',function(){
+  before_text_file01.style.opacity='1.0';
+})
+
+const file02_callto_before_page = document.getElementById('file-02-callto-before-page');
+const before_text_file02 = document.getElementById('before-text-file02');
+
+file02_callto_before_page.addEventListener('click',function(){
+  before_text_file02.style.opacity='1.0';
+})
